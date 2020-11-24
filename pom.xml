@@ -11,6 +11,8 @@
         <module>BeanFactory</module>
         <module>IOC</module>
         <module>DI</module>
+        <module>TX-XML</module>
+        <module>TX-Annotation</module>
     </modules>
     <packaging>pom</packaging>
 
