@@ -10,6 +10,7 @@
     <modules>
         <module>BeanFactory</module>
         <module>IOC</module>
+        <module>DI</module>
     </modules>
     <packaging>pom</packaging>
 
