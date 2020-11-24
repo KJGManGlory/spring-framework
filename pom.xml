@@ -15,7 +15,7 @@
 
     <properties>
         <project.version>1.0-SNAPSHOT</project.version>
-        <spring.version>5.2.4.RELEASE</spring.version>
+        <spring.version>4.2.4.RELEASE</spring.version>
         <lombok.version>1.18.10</lombok.version>
         <mysql.version>8.0.12</mysql.version>
         <dbutils.version>1.7</dbutils.version>

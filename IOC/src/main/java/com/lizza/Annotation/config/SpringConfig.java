@@ -2,10 +2,7 @@ package com.lizza.Annotation.config;
 
 import com.lizza.Annotation.entity.Book;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.FilterType;
-import org.springframework.stereotype.Service;
 
 /**
  * 1. excludeFilters: 指定扫描时需要排除哪些组件
@@ -13,11 +10,11 @@ import org.springframework.stereotype.Service;
  * 3. FilterType: 指定过滤的类型
  */
 @Configuration
-@ComponentScan(value = "com.lizza", excludeFilters = {
-        @ComponentScan.Filter(
-                type = FilterType.ANNOTATION,
-                classes = {Service.class})
-})
+//@ComponentScan(value = "com.lizza", excludeFilters = {
+//        @ComponentScan.Filter(
+//                type = FilterType.ANNOTATION,
+//                classes = {Service.class})
+//})
 public class SpringConfig {
 
     @Bean

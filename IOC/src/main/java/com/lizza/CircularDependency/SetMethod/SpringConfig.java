@@ -9,7 +9,7 @@ import org.springframework.context.annotation.Configuration;
  * @date: 2020-11-23
  */
 @Configuration
-@ComponentScan("com.lizza.CircularDependency.Constructor")
+@ComponentScan("com.lizza.CircularDependency.SetMethod")
 public class SpringConfig {
 
 }
