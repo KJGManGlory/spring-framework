@@ -7,8 +7,7 @@ import org.springframework.stereotype.Component;
 @Scope("prototype")
 public class A {
     private B b;
-    public A() {}
-    public void setB(B b) {
+    public A(B b) {
         this.b = b;
     }
     public B getB() {
