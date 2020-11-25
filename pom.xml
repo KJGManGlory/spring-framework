@@ -14,6 +14,8 @@
         <module>TX-XML</module>
         <module>TX-Annotation</module>
         <module>AOP</module>
+        <module>Proxy</module>
+        <module>AOP-XML</module>
     </modules>
     <packaging>pom</packaging>
 

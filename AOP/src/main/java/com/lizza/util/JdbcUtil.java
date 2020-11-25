@@ -6,7 +6,8 @@ import java.sql.Connection;
 import java.sql.SQLException;
 
 /**
- *
+ * 使用ThreadLocal将Connection对象和线程绑定, 实现同一个请求中的Connection是不变的, 以此避免
+ * A线程提交的是B线程的事务
  */
 public class JdbcUtil {
 
@@ -35,7 +36,7 @@ public class JdbcUtil {
 
     /**
      * 如果使用线程池提供线程，将线程池中的连接与线程解绑
-     * @author: lizza@vizen.cn
+     * @author: lizza1643@gmail.com
      * @date: 2020/3/22 9:52 下午
      * @param
      * @return void

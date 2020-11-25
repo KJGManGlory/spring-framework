@@ -10,9 +10,7 @@ import java.sql.SQLException;
 import java.util.List;
 
 /**
- * @Desc:
- * @author: lizza1643@gmail.com
- * @date: 2020-03-16
+ *
  */
 public class UserDao {
 

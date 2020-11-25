@@ -15,7 +15,7 @@ public class TransactionConfig {
 
     /**
      * 配置事务管理器
-     * @author: lizza@vizen.cn
+     * @author: lizza1643@gmail.com
      * @date: 2020/4/6 10:54 下午
      * @param dataSource
      * @return org.springframework.transaction.PlatformTransactionManager

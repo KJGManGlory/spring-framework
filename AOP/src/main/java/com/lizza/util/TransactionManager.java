@@ -15,7 +15,7 @@ public class TransactionManager {
 
     /**
      * 开启事务
-     * @author: lizza@vizen.cn
+     * @author: lizza1643@gmail.com
      * @date: 2020/3/22 9:48 下午
      * @param
      * @return void
@@ -30,7 +30,7 @@ public class TransactionManager {
 
     /**
      * 提交事务
-     * @author: lizza@vizen.cn
+     * @author: lizza1643@gmail.com
      * @date: 2020/3/22 9:48 下午
      * @param
      * @return void
@@ -45,7 +45,7 @@ public class TransactionManager {
 
     /**
      * 回滚事务
-     * @author: lizza@vizen.cn
+     * @author: lizza1643@gmail.com
      * @date: 2020/3/22 9:49 下午
      * @param
      * @return void
@@ -60,7 +60,7 @@ public class TransactionManager {
 
     /**
      * 释放连接
-     * @author: lizza@vizen.cn
+     * @author: lizza1643@gmail.com
      * @date: 2020/3/22 9:49 下午
      * @param
      * @return void
