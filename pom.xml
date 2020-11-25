@@ -13,6 +13,7 @@
         <module>DI</module>
         <module>TX-XML</module>
         <module>TX-Annotation</module>
+        <module>AOP</module>
     </modules>
     <packaging>pom</packaging>
 
