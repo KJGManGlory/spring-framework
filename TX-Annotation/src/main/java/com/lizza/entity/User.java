@@ -1,6 +1,7 @@
 package com.lizza.entity;
 
 import lombok.Data;
+import lombok.experimental.Accessors;
 
 /**
  * @Desc:
@@ -8,6 +9,7 @@ import lombok.Data;
  * @date: 2020-03-31
  */
 @Data
+@Accessors(chain = true)
 public class User {
 
     private int id;
