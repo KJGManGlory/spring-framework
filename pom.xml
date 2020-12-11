@@ -16,6 +16,7 @@
         <module>AOP</module>
         <module>Proxy</module>
         <module>AOP-XML</module>
+        <module>RestTemplate</module>
     </modules>
     <packaging>pom</packaging>
 
