@@ -22,7 +22,7 @@ public class UserServiceTest {
     public void addOne() {
         User user = new User();
         user.setName("robert").setAge(23).setMoney(1000d);
-        userService.addOne(user);
+        userService.insert(user);
     }
 
     @Test
@@ -30,19 +30,22 @@ public class UserServiceTest {
     }
 
     @Test
-    public void updateOne() {
+    public void update1() {
+        User user = new User();
+        user.setId(1);
+        userService.update1(user);
     }
 
     @Test
     public void findAll() {
-        List<User> list = userService.findAll();
+        List<User> list = userService.list();
         System.out.println(list);
     }
 
     @Test
     public void transferMoney() {
         userService.transferMoney(1, 2, 100);
-        System.out.println(userService.findAll());
+        System.out.println(userService.list());
     }
 
 }

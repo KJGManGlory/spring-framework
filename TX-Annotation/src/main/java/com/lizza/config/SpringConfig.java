@@ -11,7 +11,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @Configuration
 @ComponentScan("com.lizza")
 @Import({JdbcConfig.class, TransactionConfig.class})
-@EnableTransactionManagement(mode = AdviceMode.ASPECTJ)
+@EnableTransactionManagement()
 @PropertySource("classpath:jdbc.properties")
 public class SpringConfig {
 

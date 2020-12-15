@@ -20,6 +20,8 @@ public class SpringConfig {
     @Bean
     public Book book() {
         Book book = new Book();
+        book.setName("哈利波特");
+        book.setPrice(88.0);
         return book;
     }
 }
