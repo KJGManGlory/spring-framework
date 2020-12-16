@@ -2,14 +2,14 @@ package com.lizza.service.impl;
 
 import com.lizza.config.SpringConfig;
 import com.lizza.entity.User;
+import com.lizza.service.ServiceA;
+import com.lizza.service.ServiceB;
 import com.lizza.service.UserService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
-
-import java.util.List;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(classes = SpringConfig.class)
@@ -18,34 +18,27 @@ public class UserServiceTest {
     @Autowired
     private UserService userService;
 
+    @Autowired
+    private ServiceA serviceA;
+
+    @Autowired
+    private ServiceB serviceB;
+
     @Test
-    public void addOne() {
+    public void resetUser() {
         User user = new User();
-        user.setName("robert").setAge(23).setMoney(1000d);
-        userService.insert(user);
+        user.setId(1).setName("lizza").setAge(20).setMoney(0d);
+        userService.update(user);
     }
 
-    @Test
-    public void deleteOne() {
-    }
-
+    /**
+     * 隔离级别
+     */
     @Test
     public void update1() {
         User user = new User();
         user.setId(1);
-        userService.update1(user);
-    }
-
-    @Test
-    public void findAll() {
-        List<User> list = userService.list();
-        System.out.println(list);
-    }
-
-    @Test
-    public void transferMoney() {
-        userService.transferMoney(1, 2, 100);
-        System.out.println(userService.list());
+        serviceA.update(user);
     }
 
 }

@@ -4,7 +4,6 @@ import com.lizza.dao.UserDao;
 import com.lizza.entity.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
@@ -58,32 +57,4 @@ public class UserService {
         int i = 1 / 0;
         userDao.update(toUser);
     }
-
-    /**
-     * 测试 1:
-     *  方法 A 事务隔离级别为REQUIRED
-     *  方法 B 事务隔离级别为REQUIRES_NEW
-     *  方法 A 调用方法 B, 方法 B 抛出异常, 测试方法 A 是否回滚
-     */
-    @Transactional(propagation = Propagation.REQUIRED)
-    public int update1(User user) {
-        user.setAge(1);
-        update2(user);
-        try {
-        } catch (Exception e) {
-
-        }
-        userDao.update(user);
-        return 0;
-    }
-
-    @Transactional(propagation = Propagation.REQUIRES_NEW)
-    public int update2(User user) {
-        user.setAge(2);
-        userDao.update(user);
-//        TransactionAspectSupport.currentTransactionStatus().setRollbackOnly();
-        int i = 1 / 0;
-        return 0;
-    }
-
 }
