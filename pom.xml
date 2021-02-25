@@ -18,6 +18,7 @@
         <module>AOP-XML</module>
         <module>RestTemplate</module>
         <module>web-flux</module>
+        <module>BeanPostProcessor</module>
     </modules>
     <packaging>pom</packaging>
 
