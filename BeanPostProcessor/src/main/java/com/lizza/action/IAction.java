@@ -1,4 +1,4 @@
 package com.lizza.action;
 
-public interface Action {
+public interface IAction {
 }

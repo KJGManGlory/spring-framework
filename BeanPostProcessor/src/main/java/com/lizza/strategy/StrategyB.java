@@ -8,6 +8,10 @@ import org.springframework.stereotype.Service;
  * @date: 2021-02-25
  */
 @Service
-public class StrategyB {
+public class StrategyB extends AbstractStrategy {
 
+    @Override
+    String getStrategyName() {
+        return "StrategyB";
+    }
 }

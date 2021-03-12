@@ -1,4 +1,4 @@
-package com.lizza.action;
+package com.lizza.strategy;
 
 import org.springframework.stereotype.Service;
 
@@ -8,6 +8,6 @@ import org.springframework.stereotype.Service;
  * @date: 2021-02-25
  */
 @Service
-public class ActionB implements IAction {
+public class StrategyD {
 
 }

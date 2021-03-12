@@ -8,6 +8,6 @@ import org.springframework.stereotype.Service;
  * @date: 2021-02-25
  */
 @Service
-public class ActionA implements Action {
+public class ActionA implements IAction {
 
 }

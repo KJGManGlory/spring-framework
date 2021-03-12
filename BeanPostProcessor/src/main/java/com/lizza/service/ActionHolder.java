@@ -1,6 +1,6 @@
 package com.lizza.service;
 
-import com.lizza.action.Action;
+import com.lizza.action.IAction;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.config.BeanPostProcessor;
 import org.springframework.stereotype.Component;
@@ -16,17 +16,17 @@ import java.util.Map;
 @Component
 public class ActionHolder implements BeanPostProcessor {
 
-    private Map<String, Action> actionMap = new HashMap<>();
+    private Map<String, IAction> actionMap = new HashMap<>();
 
     @Override
     public Object postProcessBeforeInitialization(Object bean, String beanName) throws BeansException {
-        if (bean instanceof Action) {
-            actionMap.put(beanName, (Action) bean);
+        if (bean instanceof IAction) {
+            actionMap.put(beanName, (IAction) bean);
         }
         return bean;
     }
 
-    public Map<String, Action> getActionMap() {
+    public Map<String, IAction> getActionMap() {
         return actionMap;
     }
 }

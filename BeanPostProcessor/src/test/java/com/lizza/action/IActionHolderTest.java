@@ -1,6 +1,5 @@
-package com.lizza;
+package com.lizza.action;
 
-import com.lizza.action.Action;
 import com.lizza.config.SpringConfig;
 import com.lizza.service.ActionHolder;
 import org.junit.Test;
@@ -18,14 +17,14 @@ import java.util.Map;
  */
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(classes = SpringConfig.class)
-public class ActionHolderTest {
+public class IActionHolderTest {
 
     @Autowired
     private ActionHolder actionHolder;
 
     @Test
     public void testGetActionMap() {
-        Map<String, Action> actionMap = actionHolder.getActionMap();
+        Map<String, IAction> actionMap = actionHolder.getActionMap();
         System.out.println(actionMap);
     }
 }
