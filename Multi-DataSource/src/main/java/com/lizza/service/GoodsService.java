@@ -18,8 +18,6 @@ public class GoodsService {
     private GoodsDao goodsDao;
 
     public Goods select(int id) {
-        Goods goods = goodsDao.select(id);
-        System.out.println(goods);
-        return goods;
+        return goodsDao.select(id);
     }
 }

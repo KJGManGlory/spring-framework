@@ -9,7 +9,6 @@
 		http://www.springframework.org/schema/context
 		http://www.springframework.org/schema/context/spring-context.xsd">
 
-
     <context:property-placeholder location="classpath:jdbc.properties" ignore-unresolvable="true"/>
 
     <!-- goods -->
@@ -39,10 +38,10 @@
     </bean>
 
     <!-- 动态切库配置 -->
-    <bean id="dynamicDaSource" class="com.lizza.datasource.RoutingDataSource">
+    <bean id="dynamicDataSource" class="com.lizza.datasource.RoutingDataSource">
         <!-- 通过key-value关联数据源 -->
         <property name="targetDataSources">
-            <map>
+            <map key-type="java.lang.String">
                 <entry value-ref="goodsDataSource" key="DS_GOODS"></entry>
                 <entry value-ref="ordersDataSource" key="DS_ORDERS"></entry>
             </map>
@@ -51,36 +50,14 @@
     </bean>
 
     <!-- SqlSessionFactory -->
-    <bean id="goodsSqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
-        <property name="dataSource" ref="dynamicDaSource" />
-        <property name="mapperLocations" value="classpath:/mapper/goods/*Mapper.xml" />
+    <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+        <property name="dataSource" ref="dynamicDataSource" />
+        <property name="mapperLocations" value="classpath:/mapper/**/*Mapper.xml" />
     </bean>
 
-    <!-- SqlSession -->
-    <bean id="goodsSqlSession" class="org.mybatis.spring.SqlSessionTemplate">
-        <constructor-arg ref="goodsSqlSessionFactory"/>
-    </bean>
-
-    <!-- Mapper Scanner -->
+    <!-- 扫描Dao接口 -->
     <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-        <property name="basePackage" value="com.lizza.dao.goods" />
-        <property name="sqlSessionFactoryBeanName" value="goodsSqlSessionFactory"/>
-    </bean>
-
-    <!-- SqlSessionFactory -->
-    <bean id="ordersSqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
-        <property name="dataSource" ref="dynamicDaSource" />
-        <property name="mapperLocations" value="classpath:/mapper/orders/*Mapper.xml" />
-    </bean>
-
-    <!-- SqlSession -->
-    <bean id="ordersSqlSession" class="org.mybatis.spring.SqlSessionTemplate">
-        <constructor-arg ref="ordersSqlSessionFactory"/>
-    </bean>
-
-    <!-- Mapper Scanner -->
-    <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-        <property name="basePackage" value="com.lizza.dao.orders" />
-        <property name="sqlSessionFactoryBeanName" value="ordersSqlSessionFactory"/>
+        <!-- 扫描当前工程和commons工程中的DAO接口 -->
+        <property name="basePackage" value="com.lizza.dao" />
     </bean>
 </beans>
