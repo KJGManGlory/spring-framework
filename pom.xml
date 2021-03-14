@@ -21,6 +21,7 @@
         <module>BeanPostProcessor</module>
         <module>multi-datasource</module>
         <module>MyBatis-Multi-DataSource</module>
+        <module>Load-Properties</module>
     </modules>
     <packaging>pom</packaging>
 

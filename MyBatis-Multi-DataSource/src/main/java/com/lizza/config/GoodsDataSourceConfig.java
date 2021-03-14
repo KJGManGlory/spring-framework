@@ -36,7 +36,6 @@ public class GoodsDataSourceConfig {
     private String password;
 
     @Bean
-    @Primary
     public DataSource goodsDataSource() {
         DruidDataSource dataSource = new DruidDataSource();
         dataSource.setUrl(url);
