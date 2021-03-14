@@ -1,6 +1,6 @@
 package com.lizza.service;
 
-import com.lizza.dao.GoodsDao;
+import com.lizza.dao.goods.GoodsDao;
 import com.lizza.entity.Goods;
 import org.springframework.stereotype.Service;
 

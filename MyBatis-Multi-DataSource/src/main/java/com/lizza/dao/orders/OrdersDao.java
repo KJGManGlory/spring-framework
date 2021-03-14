@@ -1,4 +1,4 @@
-package com.lizza.dao;
+package com.lizza.dao.orders;
 
 import com.lizza.entity.Orders;
 

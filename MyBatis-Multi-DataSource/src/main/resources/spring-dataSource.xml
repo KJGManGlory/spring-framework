@@ -9,6 +9,7 @@
 		http://www.springframework.org/schema/context
 		http://www.springframework.org/schema/context/spring-context.xsd">
 
+    <!-- SSM 整合教程: https://www.cnblogs.com/406070989senlin/p/11154791.html -->
     <context:property-placeholder location="classpath:jdbc.properties" ignore-unresolvable="true"/>
 
     <!-- goods -->
@@ -33,6 +34,6 @@
     <!-- 扫描Dao接口 -->
     <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
         <!-- 扫描当前工程和commons工程中的DAO接口 -->
-        <property name="basePackage" value="com.lizza.dao" />
+        <property name="basePackage" value="com.lizza.dao.goods" />
     </bean>
 </beans>

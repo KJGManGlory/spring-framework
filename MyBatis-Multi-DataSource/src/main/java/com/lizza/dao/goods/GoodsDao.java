@@ -1,4 +1,4 @@
-package com.lizza.dao;
+package com.lizza.dao.goods;
 
 import com.lizza.entity.Goods;
 
