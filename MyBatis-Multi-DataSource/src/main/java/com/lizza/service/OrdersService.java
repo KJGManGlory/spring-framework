@@ -2,7 +2,6 @@ package com.lizza.service;
 
 import com.lizza.dao.orders.OrdersMapper;
 import com.lizza.entity.Orders;
-import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
 
@@ -11,7 +10,7 @@ import javax.annotation.Resource;
  * @author: lizza.liu
  * @date: 2021-03-14
  */
-@Service
+//@Service
 public class OrdersService {
 
     @Resource
