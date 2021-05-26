@@ -22,6 +22,7 @@
         <module>multi-datasource</module>
         <module>MyBatis-Multi-DataSource</module>
         <module>Load-Properties</module>
+        <module>AOP-Annotation</module>
     </modules>
     <packaging>pom</packaging>
 
