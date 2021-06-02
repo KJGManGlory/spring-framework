@@ -1,17 +1,13 @@
 package com.lizza.config;
 
 import com.alibaba.druid.pool.DruidDataSource;
-import com.lizza.dao.goods.GoodsDao;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.mybatis.spring.SqlSessionFactoryBean;
 import org.mybatis.spring.SqlSessionTemplate;
-import org.mybatis.spring.annotation.MapperScan;
 import org.mybatis.spring.mapper.MapperScannerConfigurer;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
-import org.springframework.context.annotation.PropertySource;
 import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
 import org.springframework.jdbc.datasource.DataSourceTransactionManager;
 
@@ -21,9 +17,9 @@ import javax.sql.DataSource;
  * 1. Spring 引入配置文件: https://blog.csdn.net/wb785074651/article/details/105446933
  * 3. 多数据源配置: https://www.2cto.com/kf/201505/400273.html
  */
-@Configuration
-@PropertySource("classpath:jdbc.properties")
-@MapperScan(basePackageClasses = GoodsDao.class)
+//@Configuration
+//@PropertySource("classpath:jdbc.properties")
+//@MapperScan(basePackageClasses = GoodsDao.class)
 public class GoodsDataSourceConfig {
 
     @Value("${goods.jdbc.url}")
