@@ -31,6 +31,8 @@ public class UserDaoTest {
 
     @Test
     public void test2() {
-        logAspect.print();
+        userDao.delete();
+        userDao.save();
+        userDao.select();
     }
 }

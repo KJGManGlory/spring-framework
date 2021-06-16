@@ -16,18 +16,15 @@ import java.util.Arrays;
 @Component
 public class LogAspect {
 
-    @After("execution(* com.lizza.dao..*.delete*(..)) or" +
-            "execution(* com.lizza.dao..*.save*(..))")
+    @After("execution(* com.lizza.dao..*.save*(..)) || " +
+            "execution(* com.lizza.dao..*.delete*(..)) || " +
+            "!execution(* com.lizza.dao.UserDao.select1*(..))")
     public void daoLog(JoinPoint joinPoint) {
         try {
             System.out.println(">>>>>>Class Method: " + joinPoint.getSignature().getDeclaringTypeName() + "." + joinPoint.getSignature().getName()
-                            + ", Args: {}" + Arrays.toString(joinPoint.getArgs()));
+                            + ", Args: " + Arrays.toString(joinPoint.getArgs()));
         } catch (Exception e) {
             e.printStackTrace();
         }
-    }
-
-    public void print() {
-        System.out.println("日志记录");
     }
 }

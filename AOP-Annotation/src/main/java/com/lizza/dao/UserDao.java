@@ -10,8 +10,15 @@ import org.springframework.stereotype.Service;
 @Service
 public class UserDao {
 
-
     public void delete() {
         System.out.println("删除用户");
+    }
+
+    public void save() {
+        System.out.println("保存用户");
+    }
+
+    public void select() {
+        System.out.println("查询用户");
     }
 }
