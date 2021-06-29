@@ -21,9 +21,6 @@ public class UserDaoTest {
     @Resource
     private UserDao userDao;
 
-    @Resource
-    private LogAspect logAspect;
-
     @Test
     public void test1() {
         userDao.delete();

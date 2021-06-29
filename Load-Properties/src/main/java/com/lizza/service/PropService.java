@@ -28,7 +28,7 @@ public class PropService {
         return username;
     }
 
-    @Value("#{settings['goods.jdbc.username']}")
+//    @Value("#{settings['goods.jdbc.username']}")
     public void setUsername(String username) {
         this.username = username;
     }

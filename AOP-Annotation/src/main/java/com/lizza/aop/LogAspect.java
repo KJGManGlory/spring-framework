@@ -18,7 +18,8 @@ public class LogAspect {
 
     @After("execution(* com.lizza.dao..*.save*(..)) || " +
             "execution(* com.lizza.dao..*.delete*(..)) || " +
-            "!execution(* com.lizza.dao.UserDao.select1*(..))")
+            "execution(* com.lizza.dao..*.select*(..)) || " +
+            "!execution(* com.lizza.dao.UserDao.select*(..))")
     public void daoLog(JoinPoint joinPoint) {
         try {
             System.out.println(">>>>>>Class Method: " + joinPoint.getSignature().getDeclaringTypeName() + "." + joinPoint.getSignature().getName()
